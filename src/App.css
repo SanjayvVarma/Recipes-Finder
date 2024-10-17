@@ -1,0 +1,101 @@
+/* Recipe Search */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    gap: 10%;
+    padding-left: 40%;
+}
+
+.header div {
+    padding-top: 1.4rem;
+    font-size: 28px;
+}
+
+.header .link {
+    text-decoration: none;
+    color: red;
+}
+
+.link:hover {
+    color: blue;
+}
+
+.input-box input {
+    width: 20%;
+    padding: 5px 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.error-container {
+    margin-bottom: 20px;
+}
+
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.recipe-card {
+    padding: 5px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.recipe-card img {
+    width: 21rem;
+}
+
+.recipe-card p {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Favorites */
+
+.favorite-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.favo-list {
+    display: flex;
+    margin-top: 10px;
+    padding: 10px;
+    gap: 30px;
+    border: 2px solid black;
+    background-color: yellow;
+}
+
+.favo-list img {
+    width: 40rem;
+}
+
+.save-btn {
+    background-color: white;
+    color: red;
+    padding: 4px 6px;
+    border: 2px solid #04AA6D;
+    border-radius: 5px;
+}
+
+.save-btn:hover{
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+
+/* Recipe details */
