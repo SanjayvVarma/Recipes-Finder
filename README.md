@@ -37,21 +37,18 @@ The **Recipe Finder Application** is a web application that allows users to sear
 
 To run the project locally, follow these steps:
 
-### Prerequisites
-- Node.js (version 16 or higher) and npm installed on your machine.
-
 ### Steps
 
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/recipe-finder-app.git
+   git clone https://github.com/SanjayvVarma/Recipes-Finder.git
    ```
 
 2. **Navigate to the project directory**:
 
    ```bash
-   cd recipe-finder-app
+   cd Recipe-Finder
    ```
 
 3. **Install dependencies**:
@@ -78,16 +75,6 @@ To run the project locally, follow these steps:
    ```
 
    This will start the development server. Open your browser and navigate to `http://localhost:5173` to view the application.
-
-6. **Build the project for production**:
-
-   If you want to create a production build of the project, run:
-
-   ```bash
-   npm run build
-   ```
-
-   The production build will be generated in the `dist` folder.
 
 ## Images
 
