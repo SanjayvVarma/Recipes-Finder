@@ -44,7 +44,7 @@ const RecipeSearch = () => {
     };
 
     useEffect(() => {
-        // fetchDefaultRecipes();
+        fetchDefaultRecipes();
     }, []);
 
     const handleSearch = (e) => {
