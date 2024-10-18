@@ -61,7 +61,7 @@
     font-weight: bold;
 }
 
-/* Favorites */
+/* Favorites & Recipe details */
 
 .favorite-container {
     display: flex;
@@ -91,11 +91,76 @@
     border-radius: 5px;
 }
 
-.save-btn:hover{
+.save-btn:hover {
     background-color: #04AA6D;
     color: white;
 }
 
+/* Responsive styling */
 
+@media (max-width: 1200px) {
+    .recipe-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-/* Recipe details */
+    .recipe-card img {
+        width: 18rem;
+    }
+
+    .favo-list img {
+        width: 30rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .recipe-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        padding-left: 0;
+        justify-content: space-between;
+    }
+
+    .input-box input {
+        width: 50%;
+    }
+
+    .recipe-card img {
+        width: 15rem;
+    }
+
+    .favo-list img {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .input-box input {
+        width: 80%;
+    }
+
+    .recipe-list {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-card img {
+        width: 100%;
+    }
+
+    .favo-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .favo-list img {
+        width: 100%;
+    }
+}
