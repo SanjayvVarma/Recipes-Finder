@@ -1,5 +1,5 @@
 
-# Recipe Finder Application
+# Recipe Finder App
 
 ## Overview
 The **Recipe Finder Application** is a web application that allows users to search for recipes using the Spoonacular API, view detailed information about each recipe, and save their favorite recipes locally in their browser. This project is built using **React JS** with **Vite**, utilizing React Router for navigation, and local storage for saving favorite recipes.
@@ -83,19 +83,18 @@ To run the project locally, follow these steps:
 ## Images
 
 ### Main Search Page
-![Main Search Page](./screenshots/search-page.png)
+![Main Search Page](./src/assets/homePage.png)
 
 ### Recipe Details Page
-![Recipe Details Page](./screenshots/details-page.png)
+![Recipe Details Page](./src/assets/DetailsPage.png)
 
 ### Favorites Page
-![Favorites Page](./screenshots/favorites-page.png)
+![Favorites Page](./src/assets/favoritePage.png)
 
 ## Packages Used
 - **React Router**: For client-side routing to navigate between the search page, recipe details, and favorites page.
 - **Spoonacular API**: For retrieving recipe data (both search results and individual recipe details).
 - **LocalStorage**: To store the user's favorite recipes locally on their device.
-- **Vite**: As the build tool for this React project.
 
 ## Learning Experience
 During the development of this project, I gained experience with:
