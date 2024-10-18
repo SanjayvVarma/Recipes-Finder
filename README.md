@@ -4,6 +4,10 @@
 ## Overview
 The **Recipe Finder Application** is a web application that allows users to search for recipes using the Spoonacular API, view detailed information about each recipe, and save their favorite recipes locally in their browser. This project is built using **React JS** with **Vite**, utilizing React Router for navigation, and local storage for saving favorite recipes.
 
+## Live Demo
+
+You can access the live demo of the project here: [Recipes Finder App](https://recipes-finder-sandy.vercel.app/)
+
 ## Key Features
 1. **Recipe Search**: Users can search for recipes by entering keywords. The search functionality is powered by the Spoonacular API, which returns recipe results based on the user query.
    
