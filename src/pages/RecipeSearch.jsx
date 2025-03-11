@@ -5,9 +5,13 @@ const RecipeSearch = () => {
     const [query, setQuery] = useState('');
     const [recipes, setRecipes] = useState([]);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate()
 
     const searchRecipes = async (query) => {
+
+        setLoading(true)
+
         try {
             const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${import.meta.env.VITE_SPOONACULAR_API_KEY}`);
 
@@ -21,10 +25,14 @@ const RecipeSearch = () => {
             }
         } catch (error) {
             setError('Failed to fetch recipes. Please try again.');
+        } finally {
+            setLoading(false);
         }
     };
 
     const fetchDefaultRecipes = async () => {
+        setLoading(true)
+
         try {
             const response = await fetch(`https://api.spoonacular.com/recipes/random?number=10&apiKey=${import.meta.env.VITE_SPOONACULAR_API_KEY}`);
 
@@ -39,7 +47,9 @@ const RecipeSearch = () => {
             }
 
         } catch (error) {
-            setError('Failed to load default recipes.');
+            setError('Failed to load default recipes.', error);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -76,16 +86,20 @@ const RecipeSearch = () => {
                     error && <strong>{error}</strong>
                 }
             </div>
-            <div className="recipe-list">
-                {
-                    recipes.map((recipe) => (
-                        <Link to={`/recipe/${recipe.id}`} key={recipe.id} className="recipe-card">
-                            <img src={recipe.image} alt={recipe.title} />
-                            <p>{recipe.title}</p>
-                        </Link>
-                    ))
-                }
-            </div>
+            {loading ? (
+                <h2>Loading recipes...</h2>
+            ) : (
+                <div className="recipe-list">
+                    {
+                        recipes.map((recipe) => (
+                            <Link to={`/recipe/${recipe.id}`} key={recipe.id} className="recipe-card">
+                                <img src={recipe.image} alt={recipe.title} />
+                                <p>{recipe.title}</p>
+                            </Link>
+                        ))
+                    }
+                </div>
+            )}
         </div>
     );
 };
